@@ -1,0 +1,54 @@
+name: FacebookFeed
+version: 0.1.0
+description: Display customizable Facebook feed on your website.
+icon: facebook-official
+author:
+  name: Karol Orzeł
+  email: contact@karolorzel.com
+  url: http://www.karolorzel.com
+homepage: https://github.com/hexplor/grav-plugin-facebookfeed
+keywords: facebook, plugin, feed
+bugs: https://github.com/hexplor/grav-plugin-facebookfeed/issues
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
+    app_id:
+      type: text
+      size: medium
+      label: App ID
+      default: '123456'
+      help: Default app id
+
+    app_secret:
+      type: text
+      size: medium
+      label: App Secret
+      default: '123456'
+      help: Default app secret
+
+    page_id:
+      type: text
+      size: medium
+      label: Page ID
+      default: '328115812141'
+      help: Default page id
+
+    limit:
+      type: text
+      size: medium
+      label: Limit
+      default: '328115812141'
+      help: Posts limit

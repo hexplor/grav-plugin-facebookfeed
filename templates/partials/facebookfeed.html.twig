@@ -1,0 +1,4 @@
+{% for item in facebookfeed %}
+  <h2>{{ item.message|truncate(25, true) }}</h2>
+  <p>{{ item.message }}</p>
+{% endfor %}

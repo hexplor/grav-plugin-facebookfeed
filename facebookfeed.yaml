@@ -1,0 +1,13 @@
+enabled: true
+
+# Facebook App ID
+app_id: ''
+
+# Facebook App Secret
+app_secret: ''
+
+# Facebook Page ID
+page_id: 328115812141
+
+# Posts limit:
+limit: 10
