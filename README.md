@@ -1,6 +1,6 @@
 # FacebookFeed Plugin
 
-`FacebookFeed Plugin` is a [Grav][grav] Plugin which displays customizable Facebook feed on your website.
+`FacebookFeed Plugin` is a Grav Plugin which displays customizable Facebook feed on your website.
 
 ## Installation
 
