@@ -20,13 +20,13 @@ You also need to add the included Twig partials template into your own theme som
 
 ```
 # Facebook App ID
-app_id: 903374123006560
+app_id: 12345678
 
 # Facebook App Secret
-app_secret: 7b04eacca36bd1c5513876310df45ad0
+app_secret: 12345678
 
 # Facebook Page ID
-page_id: 328115812141
+page_id: 12345678
 
 # Posts limit:
 limit: 10
