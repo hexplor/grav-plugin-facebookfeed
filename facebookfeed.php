@@ -42,17 +42,21 @@ class FacebookFeedPlugin extends Plugin
       $response = $fb->get('/' . $this->config->get('plugins.facebookfeed.page_id') . '/feed?limit=' . $this->config->get('plugins.facebookfeed.limit') .'');
     } catch(\Facebook\Exceptions\FacebookResponseException $e) {
       // When Graph returns an error
-      echo 'Graph returned an error: ' . $e->getMessage();
-      exit;
+      $error = 'Graph returned an error: ' . $e->getMessage();
     } catch(\Facebook\Exceptions\FacebookSDKException $e) {
       // When validation fails or other local issues
-      echo 'Facebook SDK returned an error: ' . $e->getMessage();
-      exit;
+      $error = 'Facebook SDK returned an error: ' . $e->getMessage();
     }
 
-    $facebookfeed = $response->getDecodedBody();
+    if (!empty($response)) {
+      $facebookfeed = $response->getDecodedBody();
+      $this->grav['twig']->twig_vars['facebookfeed'] = $facebookfeed['data'];
+    } else {
+      $this->grav['twig']->twig_vars['facebookfeed_error'] = $error;
+    }
 
-    $this->grav['twig']->twig_vars['facebookfeed'] = $facebookfeed['data'];
+
+
   }
 
   /**

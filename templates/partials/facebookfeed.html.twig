@@ -2,3 +2,10 @@
   <h2>{{ item.message|truncate(25, true) }}</h2>
   <p>{{ item.message }}</p>
 {% endfor %}
+
+
+{% if facebookfeed_error %}
+<div class="notices red">
+  <p>{{ facebookfeed_error }}</p>
+</div>
+{% endif %}

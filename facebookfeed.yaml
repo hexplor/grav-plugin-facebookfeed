@@ -1,10 +1,10 @@
 enabled: true
 
 # Facebook App ID
-app_id: ''
+app_id: '12345678'
 
 # Facebook App Secret
-app_secret: ''
+app_secret: '12345678'
 
 # Facebook Page ID
 page_id: 328115812141
